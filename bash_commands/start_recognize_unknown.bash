@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
-cd ~/video_face_identification/build
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-rm -rf ../output_batch/tmp
+BUILD_DIR="$REPO_ROOT/build"
+OUT_DIR="$REPO_ROOT/output_batch/tmp"
 
-./app --dir ../data/test_videos/unknown \
-      --out ../output_batch/tmp \
+cd "$BUILD_DIR"
+
+rm -rf "$OUT_DIR"
+
+./app --dir "$REPO_ROOT/data/test_videos/unknown" \
+      --out "$OUT_DIR" \
       --train_web "" \
-      --train_auto ../data/train_auto_pred/clusters_clean \
+      --train_auto "$REPO_ROOT/data/train_auto_pred/clusters_clean" \
       --step 5 \
       --conf 0.60 \
       --nms 0.40 \
