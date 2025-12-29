@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.sh  text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.h   text eol=lf
