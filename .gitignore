@@ -19,10 +19,3 @@ data/train_auto_pred/clusters_clean/**
 !data/train_auto_pred/clusters_clean/**/
 !data/train_auto_pred/clusters_clean/**/aligned/
 !data/train_auto_pred/clusters_clean/**/aligned/**
-
-# still ignore other folders
-data/train_auto_pred/clusters_clean/**/clean/
-data/train_auto_pred/clusters_clean/**/clean/**
-data/train_auto_pred/clusters_clean/**/outliers/
-data/train_auto_pred/clusters_clean/**/outliers/**
-data/train_auto_pred/clusters_clean/**/report.txt
