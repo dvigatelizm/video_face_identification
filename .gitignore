@@ -1,0 +1,28 @@
+# build artifacts
+build/
+tools/build_*/
+
+# python/venv
+.venv/
+__pycache__/
+*.pyc
+
+# outputs
+output_batch/
+data/test_videos/
+
+# --- clusters_clean: ignore everything by default ---
+data/train_auto_pred/clusters_clean/**
+
+# but keep directory structure visible
+!data/train_auto_pred/clusters_clean/
+!data/train_auto_pred/clusters_clean/**/
+!data/train_auto_pred/clusters_clean/**/aligned/
+!data/train_auto_pred/clusters_clean/**/aligned/**
+
+# still ignore other folders
+data/train_auto_pred/clusters_clean/**/clean/
+data/train_auto_pred/clusters_clean/**/clean/**
+data/train_auto_pred/clusters_clean/**/outliers/
+data/train_auto_pred/clusters_clean/**/outliers/**
+data/train_auto_pred/clusters_clean/**/report.txt
